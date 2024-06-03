@@ -6,7 +6,7 @@ args = sys.argv
 
 def validate(commands) -> None:
     if len(commands) < 2:
-        print("Usage: nqueens N\n")
+        print("Usage: nqueens N")
         sys.exit(1)
     try:
         n = int(commands[1])
