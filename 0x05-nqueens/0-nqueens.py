@@ -11,7 +11,7 @@ def validate(commands) -> None:
     try:
         n = int(commands[1])
 
-    except:
+    except Exception as e:
         print('N must be a number')
         sys.exit(1)
 
@@ -21,10 +21,12 @@ def validate(commands) -> None:
     return None
 
 
+validate(args)
+cells = int(int(args[1]))
 chessBoard = []
-for i in range(4):
+for i in range(cells):
     row = []
-    for j in range(4):
+    for j in range(cells):
         row.append(False)
     chessBoard.append(row)
 
